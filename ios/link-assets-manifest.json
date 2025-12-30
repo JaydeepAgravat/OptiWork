@@ -1,0 +1,45 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fontFamilies/GoogleSans-Bold.ttf",
+      "sha1": "2e577a5eecfc65e5e34bc948d4c4f846207c4612"
+    },
+    {
+      "path": "src/assets/fontFamilies/GoogleSans-Medium.ttf",
+      "sha1": "9a24eecc0bc0c617199a6801752a42c00c7f1319"
+    },
+    {
+      "path": "src/assets/fontFamilies/GoogleSans-Regular.ttf",
+      "sha1": "33a5cb17dc4743ee95efe6dc4b3f75a38c5acbf7"
+    },
+    {
+      "path": "src/assets/fontFamilies/GoogleSans-SemiBold.ttf",
+      "sha1": "1a37a2ad4e69511f745eacb30f7c0cc362139517"
+    },
+    {
+      "path": "src/assets/fontFamilies/StackSansText-Bold.ttf",
+      "sha1": "3344069bd8e2b7175a25d70d3e3fab950b726d6a"
+    },
+    {
+      "path": "src/assets/fontFamilies/StackSansText-ExtraLight.ttf",
+      "sha1": "d48cf203c6ba954025c4a916d9340af1f346e1a1"
+    },
+    {
+      "path": "src/assets/fontFamilies/StackSansText-Light.ttf",
+      "sha1": "3664bbc1980d4d4cae7a8dcf3f18a9d37e09e468"
+    },
+    {
+      "path": "src/assets/fontFamilies/StackSansText-Medium.ttf",
+      "sha1": "89eeebb3c7f9209246bc299b0ca2d0698baaf917"
+    },
+    {
+      "path": "src/assets/fontFamilies/StackSansText-Regular.ttf",
+      "sha1": "dde231233408a35fa28d476f014b9445112623c2"
+    },
+    {
+      "path": "src/assets/fontFamilies/StackSansText-SemiBold.ttf",
+      "sha1": "97cfe0df3cd87bbb2c0fe16084e6d4ef65c6fad0"
+    }
+  ]
+}

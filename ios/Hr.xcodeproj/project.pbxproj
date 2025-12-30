@@ -11,6 +11,16 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		5BF25F3C6308432D89E22593 /* GoogleSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921AE8A9FA574BD7B40BFACA /* GoogleSans-Bold.ttf */; };
+		D038D1CF1CDD48358B2C5649 /* GoogleSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD921546E8F2483DA32DDF24 /* GoogleSans-Medium.ttf */; };
+		03FCFF7E387E4619AD08D47B /* GoogleSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0CF5AA4EC8C498EB0E11C5D /* GoogleSans-Regular.ttf */; };
+		4A403E5DF78F40FE8AD29D94 /* GoogleSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44B3F9F95EEE47E18CA30863 /* GoogleSans-SemiBold.ttf */; };
+		3BB1E1C7BE3F4EBEA73DEED1 /* StackSansText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A326A451140B4EB1A25FD874 /* StackSansText-Bold.ttf */; };
+		90F28934B8BC43A2A563BE82 /* StackSansText-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 312EBDAE72064EB89AA1852A /* StackSansText-ExtraLight.ttf */; };
+		F03EB2F1D2E14B5484897124 /* StackSansText-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4096D7B5FCD41BCA3D10932 /* StackSansText-Light.ttf */; };
+		6A81097838EC4996BE050449 /* StackSansText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2353EE51A5A437D868F0228 /* StackSansText-Medium.ttf */; };
+		B67B5D08877742F5B8FE35FC /* StackSansText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7495A4FFB56B48979FF5E186 /* StackSansText-Regular.ttf */; };
+		CB15B8302BF64E93962BC618 /* StackSansText-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95811DEB022F43F08F9D6F35 /* StackSansText-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,16 @@
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Hr/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Hr/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		921AE8A9FA574BD7B40BFACA /* GoogleSans-Bold.ttf */ = {isa = PBXFileReference; name = "GoogleSans-Bold.ttf"; path = "../src/assets/fontFamilies/GoogleSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FD921546E8F2483DA32DDF24 /* GoogleSans-Medium.ttf */ = {isa = PBXFileReference; name = "GoogleSans-Medium.ttf"; path = "../src/assets/fontFamilies/GoogleSans-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D0CF5AA4EC8C498EB0E11C5D /* GoogleSans-Regular.ttf */ = {isa = PBXFileReference; name = "GoogleSans-Regular.ttf"; path = "../src/assets/fontFamilies/GoogleSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		44B3F9F95EEE47E18CA30863 /* GoogleSans-SemiBold.ttf */ = {isa = PBXFileReference; name = "GoogleSans-SemiBold.ttf"; path = "../src/assets/fontFamilies/GoogleSans-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A326A451140B4EB1A25FD874 /* StackSansText-Bold.ttf */ = {isa = PBXFileReference; name = "StackSansText-Bold.ttf"; path = "../src/assets/fontFamilies/StackSansText-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		312EBDAE72064EB89AA1852A /* StackSansText-ExtraLight.ttf */ = {isa = PBXFileReference; name = "StackSansText-ExtraLight.ttf"; path = "../src/assets/fontFamilies/StackSansText-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A4096D7B5FCD41BCA3D10932 /* StackSansText-Light.ttf */ = {isa = PBXFileReference; name = "StackSansText-Light.ttf"; path = "../src/assets/fontFamilies/StackSansText-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D2353EE51A5A437D868F0228 /* StackSansText-Medium.ttf */ = {isa = PBXFileReference; name = "StackSansText-Medium.ttf"; path = "../src/assets/fontFamilies/StackSansText-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7495A4FFB56B48979FF5E186 /* StackSansText-Regular.ttf */ = {isa = PBXFileReference; name = "StackSansText-Regular.ttf"; path = "../src/assets/fontFamilies/StackSansText-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		95811DEB022F43F08F9D6F35 /* StackSansText-SemiBold.ttf */ = {isa = PBXFileReference; name = "StackSansText-SemiBold.ttf"; path = "../src/assets/fontFamilies/StackSansText-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +94,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				F904C3DB26224187BC0EF691 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -96,6 +117,24 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		F904C3DB26224187BC0EF691 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				921AE8A9FA574BD7B40BFACA /* GoogleSans-Bold.ttf */,
+				FD921546E8F2483DA32DDF24 /* GoogleSans-Medium.ttf */,
+				D0CF5AA4EC8C498EB0E11C5D /* GoogleSans-Regular.ttf */,
+				44B3F9F95EEE47E18CA30863 /* GoogleSans-SemiBold.ttf */,
+				A326A451140B4EB1A25FD874 /* StackSansText-Bold.ttf */,
+				312EBDAE72064EB89AA1852A /* StackSansText-ExtraLight.ttf */,
+				A4096D7B5FCD41BCA3D10932 /* StackSansText-Light.ttf */,
+				D2353EE51A5A437D868F0228 /* StackSansText-Medium.ttf */,
+				7495A4FFB56B48979FF5E186 /* StackSansText-Regular.ttf */,
+				95811DEB022F43F08F9D6F35 /* StackSansText-SemiBold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -159,6 +198,16 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				5BF25F3C6308432D89E22593 /* GoogleSans-Bold.ttf in Resources */,
+				D038D1CF1CDD48358B2C5649 /* GoogleSans-Medium.ttf in Resources */,
+				03FCFF7E387E4619AD08D47B /* GoogleSans-Regular.ttf in Resources */,
+				4A403E5DF78F40FE8AD29D94 /* GoogleSans-SemiBold.ttf in Resources */,
+				3BB1E1C7BE3F4EBEA73DEED1 /* StackSansText-Bold.ttf in Resources */,
+				90F28934B8BC43A2A563BE82 /* StackSansText-ExtraLight.ttf in Resources */,
+				F03EB2F1D2E14B5484897124 /* StackSansText-Light.ttf in Resources */,
+				6A81097838EC4996BE050449 /* StackSansText-Medium.ttf in Resources */,
+				B67B5D08877742F5B8FE35FC /* StackSansText-Regular.ttf in Resources */,
+				CB15B8302BF64E93962BC618 /* StackSansText-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
