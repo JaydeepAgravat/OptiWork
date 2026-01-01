@@ -11,9 +11,15 @@
   },
   "dependencies": {
     "@react-native/new-app-screen": "0.83.1",
+    "i18next": "^25.7.3",
     "react": "19.2.0",
+    "react-i18next": "^16.5.1",
     "react-native": "0.83.1",
     "react-native-linear-gradient": "^2.8.3",
+    "react-native-localize": "^3.6.1",
+    "react-native-mmkv": "^4.1.0",
+    "react-native-nitro-modules": "^0.32.0",
+    "react-native-restart": "^0.0.27",
     "react-native-safe-area-context": "^5.5.2"
   },
   "devDependencies": {
