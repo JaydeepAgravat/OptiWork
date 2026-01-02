@@ -1,9 +1,10 @@
-import { StyleSheet, View } from "react-native"
+import { Button, StyleSheet, View } from "react-native"
 import LinearGradient from "react-native-linear-gradient"
 import AppText from "../components/ui/AppText"
 import AppButton from "../components/ui/AppButton"
 import { AppLanguage, useAppTranslation } from "../i18n/translations"
 import i18n from "../i18n"
+import { toast } from "sonner-native"
 
 
 export const changeLanguage = async (lang: AppLanguage) => {
@@ -85,6 +86,10 @@ const OnBoard = () => {
                 <AppButton title={t("skip", { ns: "common" })} onPress={onSkipPress} /> */}
                 <AppButton title="Switch to Arabic (RTL)" onPress={onChangeToArabic} />
                 <AppButton title="Switch to English" onPress={onChangeToEnglish} />
+                <Button
+                    title="Show Toast"
+                    onPress={() => toast('Hello, World!')}
+                />
             </View>
         </View>
 
