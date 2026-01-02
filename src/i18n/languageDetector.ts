@@ -8,6 +8,8 @@ const customDetector: LanguageDetectorModule = {
     detect: () => {
         const stored = storage.getString("app_language");
 
+        console.log("stored", stored)
+
         if (stored) {
             return stored;
         }
@@ -22,6 +24,7 @@ const customDetector: LanguageDetectorModule = {
     init: () => { },
 
     cacheUserLanguage: (lng: string) => {
+        console.log("cached user language")
         storage.set("app_language", lng);
     },
 };

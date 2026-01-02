@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import languageDetector from "./languageDetector";
-import { bootstrapTranslations } from "./i18n.service";
+import { resources } from './translations'
 
 i18n
     .use(languageDetector)
@@ -9,14 +9,15 @@ i18n
     .init({
         compatibilityJSON: "v4",
         fallbackLng: "en",
+        resources,
         ns: ["common", "onboard"],
         defaultNS: "common",
-        interpolation: { escapeValue: false },
-        react: { useSuspense: false },
-    }).then(() => {
-        bootstrapTranslations();
+        interpolation: {
+            escapeValue: false,
+        },
+        react: {
+            useSuspense: false,
+        },
     })
-
-
 
 export default i18n;

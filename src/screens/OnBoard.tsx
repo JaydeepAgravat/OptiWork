@@ -2,17 +2,35 @@ import { StyleSheet, View } from "react-native"
 import LinearGradient from "react-native-linear-gradient"
 import AppText from "../components/ui/AppText"
 import AppButton from "../components/ui/AppButton"
-import { useTranslation } from "react-i18next"
-import { changeLanguage } from "../i18n/i18n.service"
+import { AppLanguage, useAppTranslation } from "../i18n/translations"
+import i18n from "../i18n"
+
+
+export const changeLanguage = async (lang: AppLanguage) => {
+    if (i18n.language === lang) return;
+
+    i18n.changeLanguage(lang);
+};
 
 const OnBoard = () => {
-    const { t } = useTranslation(["onboard", "common"]);
-    const onChangeToArabic = () => changeLanguage("ar");
-    const onChangeToEnglish = () => changeLanguage("en");
+    const { t: tCommon, } = useAppTranslation();
+    const { t: tOnboard } = useAppTranslation("onboard");
+    const { t: tBoth } = useAppTranslation(["common", "onboard"]);
 
-    const onNextPress = () => { }
+    const onChangeToArabic = async () => {
 
-    const onSkipPress = () => { }
+        await changeLanguage("ar")
+    };
+    const onChangeToEnglish = () => {
+        changeLanguage("en")
+    };
+
+    // const onNextPress = () => {
+
+
+    //  }
+
+    // const onSkipPress = () => { }
 
     return <View style={styles.root}>
         <LinearGradient
@@ -23,7 +41,28 @@ const OnBoard = () => {
             <View
                 style={styles.texts}
             >
-                <AppText
+                <AppText>
+                    {tCommon("next")}
+
+                </AppText>
+
+                <AppText>
+
+                    {tOnboard("title")}
+
+                </AppText>
+                <AppText>
+                    {tBoth("onboard:subtitle")}
+
+                </AppText>
+                <AppText>
+                    {tBoth("common:skip")}
+                </AppText>
+                <AppText>
+                    {tBoth("common:next")}
+                </AppText>
+
+                {/* <AppText
                     typographyToken="h3"
                     textAlign="center"
 
@@ -32,7 +71,7 @@ const OnBoard = () => {
                     typographyToken="body"
                     textAlign="center"
                     colorToken="textSecondary"
-                > {t("subtitle", { ns: "onboard" })}</AppText>
+                > {t("subtitle", { ns: "onboard" })}</AppText> */}
             </View>
             <View style={styles.tabs}>
                 <View style={styles.activeTab} />
@@ -42,8 +81,8 @@ const OnBoard = () => {
             <View
                 style={styles.buttons}
             >
-                <AppButton title={t("next", { ns: "common" })} onPress={onNextPress} />
-                <AppButton title={t("skip", { ns: "common" })} onPress={onSkipPress} />
+                {/* <AppButton title={t("next", { ns: "common" })} onPress={onNextPress} />
+                <AppButton title={t("skip", { ns: "common" })} onPress={onSkipPress} /> */}
                 <AppButton title="Switch to Arabic (RTL)" onPress={onChangeToArabic} />
                 <AppButton title="Switch to English" onPress={onChangeToEnglish} />
             </View>
