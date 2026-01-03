@@ -1,50 +1,53 @@
-import React from "react";
-import { Text, TextProps, StyleSheet, TextStyle } from "react-native";
-import { typography, TypographyTokens } from "../../theme/typography";
-import colors, { ColorTokens } from "../../theme/colors";
+import React, { memo, useMemo } from 'react';
+import { Text, StyleSheet, TextStyle } from 'react-native';
+import { typography } from '../../theme/typography';
+import colors from '../../theme/colors';
+import { textPresets, TextPresetName } from '../../theme/textPresets';
+import { TxKeyPath } from '../../i18n/translations';
+import { TOptions } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
-interface AppTextProps extends TextProps {
-    children: React.ReactNode;
-    typographyToken?: TypographyTokens;
-    colorToken?: ColorTokens;
-    textAlign?: TextStyle["textAlign"]
+interface AppTextProps {
+  tx: TxKeyPath;
+  txOptions?: TOptions;
+  preset?: TextPresetName;
+  textAlign?: TextStyle['textAlign'];
+  numberOfLines?: number;
 }
 
 const AppText = ({
-    children,
-    typographyToken = "body",
-    colorToken = "textPrimary",
-    textAlign,
-    style,
-    ...rest
+  tx,
+  txOptions,
+  preset = 'bodyPrimary',
+  textAlign,
+  numberOfLines,
 }: AppTextProps) => {
-    const selectedTypography = typography[typographyToken];
-    const selectedColor = colors.light[colorToken]
+  const { t } = useTranslation();
+  const finalStyle = useMemo<TextStyle>(() => {
+    const selectedPreset = textPresets[preset] ?? textPresets.bodyPrimary;
+    const typographyStyle = typography[selectedPreset.variant];
 
-    return (
-        <Text
-            {...rest}
-            style={[
-                styles.text,
-                {
-                    textAlign,
-                    fontFamily: selectedTypography.fontFamily,
-                    fontSize: selectedTypography.fontSize,
-                    lineHeight: selectedTypography.lineHeight,
-                    color: selectedColor,
-                },
-                style,
-            ]}
-        >
-            {children}
-        </Text>
-    );
+    return {
+      textAlign,
+      fontFamily: typographyStyle.fontFamily,
+      fontSize: typographyStyle.fontSize,
+      lineHeight: typographyStyle.lineHeight,
+      letterSpacing: typographyStyle.letterSpacing,
+      color: colors.light[selectedPreset.color],
+    };
+  }, [preset, textAlign]);
+
+  return (
+    <Text numberOfLines={numberOfLines} style={[styles.base, finalStyle]}>
+      {t(tx, txOptions)}
+    </Text>
+  );
 };
 
 const styles = StyleSheet.create({
-    text: {
-        includeFontPadding: false,
-    },
+  base: {
+    includeFontPadding: false,
+  },
 });
 
-export default AppText;
+export default memo(AppText);

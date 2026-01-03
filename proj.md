@@ -22,12 +22,11 @@ Rank,Project Name,Hours logged,% of Total
 Topic
 
 Machine Coding
-=> bootstrap react native project without expo
-=> add font family & show demo
-=> configure multiLang
-=> configure responsive
+✅=> bootstrap react native project without expo
+✅=> add font family & show demo
+✅=> configure multiLang
+✅=> configure toast
 => configure light/dark/system, multi color system
-=> configure toast
 => splash screen & app icon
 => configure nested navigations cover all types
 => configure advanced redux

@@ -1,13 +1,17 @@
-// import "./src/i18n/index.ts"
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import OnBoard from "./src/screens/OnBoard"
-import { Toaster } from "sonner-native";
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { AppToaster } from './src/components/toast/AppToaster';
+import OnBoard from './src/screens/OnBoard';
 
 const App = () => {
-
-  return <GestureHandlerRootView><OnBoard />
-    <Toaster />
-  </GestureHandlerRootView>
-}
+  return (
+    <SafeAreaProvider>
+      <GestureHandlerRootView>
+        <OnBoard />
+        <AppToaster />
+      </GestureHandlerRootView>
+    </SafeAreaProvider>
+  );
+};
 
 export default App;
