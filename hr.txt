@@ -1,0 +1,110 @@
+1. onboarding screen 1
+
+- Welcome to Workmate!
+- Make Smart Decisions! Set clear timelines for projects and celebrate your achievements!
+- Next
+- Skip
+
+2. onboarding screen 2
+
+- Manage Stress Effectively
+- Stay Balanced! Track your workload and maintain a healthy stress level with ease.
+- Next
+- Skip
+
+3. onboarding screen 3
+
+- Plan for Success
+- Your Journey Starts Here! Earn achievement badges as you conquer your tasks. Let’s get started!
+- Next
+- Skip
+
+4. onboarding screen 4
+
+- Navigate Your Work Journey Efficient & Easy
+- Increase your work management & career development radically.
+- Sign In
+
+5. signin email/password screen
+
+- Sign In
+- Sign in to my account
+- Email
+- My Email
+- Password
+- My Password
+- Remember Me
+- Forgot Password?
+- Sign In
+- OR
+- Sign in With Employee ID
+- Sign in With Phone
+
+6. signin phonenumber screen
+
+- Sign In
+- Sign in to my account
+- Phone Number
+- Remember Me
+- Forgot Password?
+- Sign In
+- OR
+- Sign in With Employee ID
+- Sign in With Email
+
+7. signin phonenumber otp confirmation screen
+
+- Sign In Phone Number
+- Sign in code has been sent to +1234567890, check your inbox to continue the sign in process.
+- Haven't received the sign in code? 
+- Resend It.
+- Submit
+- Sign in with different method Here.
+
+8. signin employeeID screen
+
+- Sign In
+- Sign in to my account
+- Employee ID
+- My Employee ID
+- Password
+- My Password
+- Remember Me
+- Forgot Password?
+- Sign In
+- OR
+- Sign in With Email
+- Sign in With Phone
+
+9, forgot password screen
+
+- Forgot Password
+- A verification code will be sent to your email to reset your password.
+- Email
+- My email
+- Send Verification Code
+
+
+9, forgot password email confirmation screen
+
+- Forgot Password
+- A reset code has been sent to Tonald@work.com, check your email to continue the password reset process.
+- Haven't received the verification code? Resend it.Haven't received the verification code?
+- Resend it.
+- Submit
+
+10. set a new password screen
+
+- Set a New Password
+- Please set a new password to secure your Work Mate account.
+- Password
+- Input Password
+- Confirm Password
+- Re Enter Your Password
+- Submit
+
+11. password created screen
+
+- Password Has Been Created
+- To log in to your account, click the Sign in button and enter your email along with your new password.
+- Sign In
