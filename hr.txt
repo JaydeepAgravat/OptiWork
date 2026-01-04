@@ -108,3 +108,233 @@
 - Password Has Been Created
 - To log in to your account, click the Sign in button and enter your email along with your new password.
 - Sign In
+
+12. home screen
+
+- My Work Summary
+- Today task & presence activity
+- Today Meeting
+- Your schedule for the day
+- Join Meet
+- Today Task
+- The tasks assigned to you for today
+- Wiring Dashboard Analytics
+- In Progress
+- High
+
+13. attendant screen
+
+- Let’s Clock-In!
+- Don’t miss your clock in schedule
+- Total Working Hour
+- Paid Period 
+- Today
+- This Pay Period
+- Clock In
+- Take A Break
+- Clock Out
+- Back To Work
+- Total Hours
+- Clock in & Out
+
+14. task in progress screen
+
+- Challanges Awaiting
+- Let’s tackle your to do list
+- Summary of Your Work
+- Your current task progress
+- To Do
+- In Progress
+- Done
+- All
+- In Progress
+- Finish
+
+15. expense review screen
+
+- Expense Summary
+- Claim your expenses here.
+- Total Expense
+- Period 
+- Total
+- Review
+- Approved
+- Rejected
+- Type
+- Total Expense
+- E-Learning
+- Submit Expense
+- Approved at 19 Sept 2024
+- Rejected at 19 Sept 2024
+- By Elaine
+
+16. leave review screen
+
+- Leave Summary
+- Submit Leave
+- Total Leave
+- Period
+- Available
+- Leave Used
+- Review
+- Approved
+- Rejected
+- Leave Date
+- Total Leave
+- Submit Leave
+
+17. attendant/ clock in screen
+
+- Clock In Area
+- You are in the clock-in area!
+- Now you can press clock in in this area
+- MY PROFILE
+- Lat
+- Long 
+- SCHEDULE
+- CLOCK IN
+- CLOCK OUT
+- Selfie To Clock In
+
+18. attendant/ selfie clock in screen
+
+- Camera
+
+19. attendant/ selfie clock/ detail in screen
+
+- Selfie To Clock In
+- Lat
+- Long
+- Retake Photo
+- Clock In Notes (Optional)
+- Clock-in Notes
+- Clock 
+
+20. clock in sucess full screen
+
+- Clock-In Successful!
+- You’re all set! Your clock-in was successful. Head over to your dashboard to see your assigned tasks.
+- Go To Clock In Page
+
+21. attendant detail screen
+
+- Details
+- Selfi Clock In
+- Total Hours
+- Break
+- Clock in & Out
+- Take A Break & Back To Work
+
+22. attendant export screen
+
+- Export As PDF Successful!
+- Your clock-in data has been exported as a PDF. You can now download it.
+- Close Message
+
+23. confirm clock out
+
+- Confirm Clockout
+- Once you clock out, you won’t be able to edit this time. Please double-check your hours before proceeding.
+- Today
+- Overtime
+- Yes, Clock Out
+- No, Let me check
+
+24. clock out successfull
+
+- Clockout Successful!
+- You’ve officially clocked out for the day. Thank you for your hard work! Time to relax and enjoy your break.
+- Close Message
+
+25. create new task screen
+
+- Create New Task
+- Attachment
+- Format should be in .pdf .jpeg .png less than 5MB
+- Task Title
+- Enter Task Title
+- Task Description
+- Enter Task Description
+- Assign To
+- Select Member
+- Priority
+- Select Priority
+- Difficulty
+- Select Difficulty
+- Create Task
+- uploading...
+- Who will finish this task
+- Cancel
+- Select
+- Select the priority
+- Low
+- Medium
+- High
+- Difficulty
+- Select the difficulty
+- Very Easy
+- Less Than a Day
+- Easy
+- A Day
+- Moderate
+- 3 Days
+- Intermediate
+- 5 Days
+- Advanced 
+- 1 Week
+- Create New Task 
+- Double-check your task details to ensure everything is correct. Do you want to proceed?
+- Yes, Proceed Now
+- No, Let me check
+- Task Has Been Created!
+- Congratulations! Task has been created! view your task in the task management
+- View Task Management
+
+26. task details screen
+- Description
+- Priority
+- Difficulty
+- Assignee
+- Comment Section
+- Write a commnet...
+
+27. messages screen
+- Messages
+- Type a message...
+
+28. notification screen
+- Notifications
+
+29. profile screen
+
+- My Profile
+- CONTACT
+- ACCOUNT
+- Personal Data
+- Office Assets
+- Payroll & Tax
+- SETTINGS
+- Change Password
+- Versioning
+- FAQ and Help
+- Logout
+
+
+----- empty components
+
+- No Meeting Available
+- It looks like you don’t have any meetings scheduled at the moment.
+- No Tasks Assigned
+- It looks like you don’t have any tasks assigned to you right now.
+- No Working Time Available
+- It looks like you don’t have any working time in this period.
+- No Expense Submitted
+- It looks like you don’t have any expense submitted. 
+- No Expense Approved
+- It looks like you don’t have any expense approved.
+- No Expense Rejected
+- It looks like you don’t have any expense rejected.
+- No Leave Submitted!
+- Ready to catch some fresh air? Click “Submit Leave” and take that well-deserved break!
+
+
