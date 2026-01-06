@@ -187,3 +187,65 @@
   paidOn: "2024-09-30",
 };
 ```
+
+## Leave
+
+```json
+[
+  {
+    "id": "leave_001",
+    "category": "Annual Leave / Vacation Leave",
+    "leaveDate": "20 Sept - 22 Sept",
+    "totalDays": 2,
+    "status": "APPROVED",
+    "submittedAt": "18 September 2024"
+  },
+  {
+    "id": "leave_002",
+    "category": "Sick Leave",
+    "leaveDate": "10 Nov - 17 Nov",
+    "totalDays": 7,
+    "status": "REVIEW",
+    "submittedAt": "10 November 2024"
+  },
+  {
+    "id": "leave_003",
+    "category": "Personal Leave",
+    "leaveDate": "11 Nov - 13 Nov",
+    "totalDays": 2,
+    "status": "REJECTED",
+    "submittedAt": "9 November 2024"
+  }
+]
+```
+
+## Task Management
+
+-> To Do 5 : 5 number of task
+-> In Progess 2 : 2 number of in progess
+-> Done 1: 1 task is done
+-> all tab: all task partial details list
+-> in progress tab: all progress task partial details list
+-> finish tab: all finish task partial details list
+->
+
+### Create Task
+
+- at max 3 attachment {any format file, img, vdo, audio }
+- task title
+- task description
+- assign to which user {all employee list}
+- priority {low, medium, high}
+- difficuly {Very Easy (Less Than a Day)
+Easy (A Day)
+Moderate (3 Days)
+Intermediate (5 Days)
+Advanced (1 Week)}
+
+## Task details
+
+- task details {exist in create task}
+- task status
+- task created date
+- who is assignee {employee details}
+- comment section
