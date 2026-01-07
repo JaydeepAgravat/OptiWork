@@ -5,6 +5,7 @@ import AppButton from '../components/ui/AppButton';
 import { appToast } from '../components/toast/appToast';
 
 import i18n from '../i18n';
+import { appLoader } from '../components/loader/appLoader';
 
 const OnBoard = () => {
   const onNextPress = () => {
@@ -14,7 +15,11 @@ const OnBoard = () => {
   };
 
   const onSkipPress = () => {
-    i18n.changeLanguage(i18n.language === 'ar' ? 'en' : 'ar');
+    appLoader.show();
+    setTimeout(() => {
+      appLoader.hide();
+    }, 5000);
+    // i18n.changeLanguage(i18n.language === 'ar' ? 'en' : 'ar');
   };
 
   return (

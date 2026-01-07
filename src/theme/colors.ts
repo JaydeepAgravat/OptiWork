@@ -13,6 +13,7 @@ export const colors = {
     textSecondary: '#6C6B73',
     textTertiary: '#8D8C92',
     textDisabled: '#CAC4D0',
+    blur: '#00000059',
   },
   dark: {
     primary: '#D0BCFF',
