@@ -6,6 +6,7 @@ import { appToast } from '../components/toast/appToast';
 
 import i18n from '../i18n';
 import { appLoader } from '../components/loader/appLoader';
+import FastImage from '@d11/react-native-fast-image';
 
 const OnBoard = () => {
   const onNextPress = () => {
@@ -21,6 +22,29 @@ const OnBoard = () => {
     }, 5000);
     // i18n.changeLanguage(i18n.language === 'ar' ? 'en' : 'ar');
   };
+  return (
+    <View
+      style={{
+        flex: 1,
+        alignSelf: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <FastImage
+        style={{
+          width: 100,
+          height: 100,
+        }}
+        source={{
+          uri: 'https://reactnative.dev/img/header_logo.svg',
+          cache: FastImage.cacheControl.immutable,
+          priority: FastImage.priority.low,
+        }}
+        resizeMode={FastImage.resizeMode.contain}
+      />
+    </View>
+  );
 
   return (
     <View style={styles.root}>
@@ -35,6 +59,7 @@ const OnBoard = () => {
           <View style={styles.inactiveTab} />
           <View style={styles.inactiveTab} />
         </View>
+
         <View style={styles.buttons}>
           <AppButton tx="common:next" onPress={onNextPress} />
           <AppButton tx="common:skip" onPress={onSkipPress} />
