@@ -1,4 +1,13 @@
 {
-    "title": "Welcome to Workmate!",
-    "subtitle": "Make smart decisions! Set clear timelines for projects and celebrate your achievements!"
+  "welcome_title": "Welcome to Workmate!",
+  "welcome_subtitle": "Make Smart Decisions! Set clear timelines for projects and celebrate your achievements!",
+
+  "stress_title": "Manage Stress Effectively",
+  "stress_subtitle": "Stay Balanced! Track your workload and maintain a healthy stress level with ease.",
+
+  "plan_title": "Plan for Success",
+  "plan_subtitle": "Your Journey Starts Here! Earn achievement badges as you conquer your tasks. Let’s get started!",
+
+  "navigation_title": "Navigate Your Work Journey Efficient and Easy",
+  "navigation_subtitle": "Increase your work management and career development radically"
 }

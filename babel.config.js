@@ -19,6 +19,8 @@ module.exports = {
           '@/storage': './src/storage',
           '@/utils': './src/utils',
           '@/providers': './src/providers',
+          '@/navigation': './src/navigation',
+          '@/hooks': './src/hooks',
         },
       },
     ],

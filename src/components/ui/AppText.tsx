@@ -1,5 +1,5 @@
+import { useAppTheme } from '@/hooks/useAppTheme';
 import { TxKeyPath } from '@/i18n/translations';
-import { useTheme } from '@/providers/ThemeProvider';
 import textPresets from '@/theme/textPresets';
 import typography from '@/theme/typography';
 import { TextPresetName } from '@/types/theme.types';
@@ -15,6 +15,7 @@ interface AppTextProps {
   preset?: TextPresetName;
   textAlign?: TextStyle['textAlign'];
   numberOfLines?: number;
+  color?: string;
 }
 
 const AppText = ({
@@ -24,9 +25,10 @@ const AppText = ({
   preset = 'bodyPrimary',
   textAlign,
   numberOfLines,
+  color,
 }: AppTextProps) => {
   const { t } = useTranslation();
-  const { activeTheme } = useTheme();
+  const { activeTheme } = useAppTheme();
   const finalStyle = useMemo<TextStyle>(() => {
     const selectedPreset = textPresets[preset] ?? textPresets.bodyPrimary;
     const typographyStyle = typography[selectedPreset.variant];
@@ -37,9 +39,9 @@ const AppText = ({
       fontSize: typographyStyle.fontSize,
       lineHeight: typographyStyle.lineHeight,
       letterSpacing: typographyStyle.letterSpacing,
-      color: activeTheme.colors[selectedPreset.color],
+      color: color ? color : activeTheme[selectedPreset.color],
     };
-  }, [preset, textAlign, activeTheme.colors]);
+  }, [preset, textAlign, color, activeTheme]);
 
   return (
     <Text numberOfLines={numberOfLines} style={[styles.base, finalStyle]}>

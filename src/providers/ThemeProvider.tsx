@@ -2,30 +2,19 @@ import { getStoredTheme, setStoredTheme } from '@/storage/themeStorage';
 import colors from '@/theme/colors';
 import {
   LightDarkMode,
-  Theme,
   ThemeContextValue,
   ThemeMode,
 } from '@/types/theme.types';
 import { getSystemTheme, listenToSystemTheme } from '@/utils/systemUtils';
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import React, { createContext, useEffect, useMemo, useState } from 'react';
 
-const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
+export const AppThemeContext = createContext<ThemeContextValue | undefined>(
+  undefined,
+);
 
-export const lightTheme: Theme = {
-  mode: 'light',
-  colors: colors.light,
-};
+export const lightTheme = colors.light;
 
-export const darkTheme: Theme = {
-  mode: 'dark',
-  colors: colors.dark,
-};
+export const darkTheme = colors.dark;
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -60,7 +49,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   return (
-    <ThemeContext.Provider
+    <AppThemeContext.Provider
       value={{
         activeTheme,
         activeColorScheme,
@@ -70,14 +59,6 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
       }}
     >
       {children}
-    </ThemeContext.Provider>
+    </AppThemeContext.Provider>
   );
-};
-
-export const useTheme = (): ThemeContextValue => {
-  const ctx = useContext(ThemeContext);
-  if (!ctx) {
-    throw new Error('useTheme must be used inside ThemeProvider');
-  }
-  return ctx;
 };

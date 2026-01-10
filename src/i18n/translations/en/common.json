@@ -1,6 +1,6 @@
 {
-    "next": "Next",
-    "skip": "Skip",
-    "hello": "Hello",
-    "bye": "Bye"
+  "next": "Next",
+  "skip": "Skip",
+  "sign_in": "Sign In",
+  "sign_up": "Sign Up"
 }

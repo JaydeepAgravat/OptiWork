@@ -1,3 +1,15 @@
+1. onboarding screens (4 var)
+2. sign in screen (3 var, [email, phone number, id])
+3. sign up screen
+4. forgot pwd screen
+5. five bottom tab screen
+5. notification screen
+
+
+
+
+
+
 1. onboarding screen 1
 
 - Welcome to Workmate!

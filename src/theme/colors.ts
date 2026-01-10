@@ -24,13 +24,13 @@ const colors = {
     bgElevated: '#F1F6FE',
     bgCard: '#FFFFFF',
     bgInput: '#F5F8FF',
-    bgBackdrop: 'rgba(0, 0, 0, 0.35)',
+    bgBackdrop: 'rgba(0, 0, 0, 0.2)',
     bgAppInverse: '#000000',
     bgSurfaceInverse: '#111827',
     bgElevatedInverse: '#1F2937',
     bgCardInverse: '#111827',
     bgInputInverse: '#1F2937',
-    bgBackdropInverse: 'rgba(255, 255, 255, 0.35)',
+    bgBackdropInverse: 'rgba(265, 265, 265, 1)',
 
     /* ========= Text ========= */
     textPrimary: '#0D1B2A',
@@ -135,13 +135,13 @@ const colors = {
     bgElevated: '#111A2C',
     bgCard: '#0F172A',
     bgInput: '#0B1A33',
-    bgBackdrop: 'rgba(0, 0, 0, 0.65)',
+    bgBackdrop: 'rgba(255, 255, 255, 0.2)',
     bgAppInverse: '#FFFFFF',
     bgSurfaceInverse: '#F9FBFF',
     bgElevatedInverse: '#F1F6FE',
     bgCardInverse: '#FFFFFF',
     bgInputInverse: '#F5F8FF',
-    bgBackdropInverse: 'rgba(0, 0, 0, 0.35)',
+    bgBackdropInverse: 'rgba(0, 0, 0, 1)',
 
     /* ========= Text ========= */
     textPrimary: '#E5E7EB',

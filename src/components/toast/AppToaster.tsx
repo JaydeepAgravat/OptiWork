@@ -1,10 +1,10 @@
-import { useTheme } from '@/providers/ThemeProvider';
+import { useAppTheme } from '@/hooks/useAppTheme';
 import typography from '@/theme/typography';
 import React from 'react';
 import { Toaster } from 'sonner-native';
 
 const AppToaster = () => {
-  const { activeColorScheme, activeTheme } = useTheme();
+  const { activeColorScheme, activeTheme } = useAppTheme();
 
   return (
     <Toaster
@@ -17,11 +17,11 @@ const AppToaster = () => {
       toastOptions={{
         titleStyle: {
           ...typography.bodyMedium,
-          color: activeTheme.colors.textPrimary,
+          color: activeTheme.textPrimary,
         },
         descriptionStyle: {
           ...typography.bodySmall,
-          color: activeTheme.colors.textSecondary,
+          color: activeTheme.textSecondary,
         },
       }}
     />

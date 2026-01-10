@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, ViewStyle } from 'react-native';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -9,7 +9,8 @@ import Animated, {
   Extrapolation,
   SharedValue,
 } from 'react-native-reanimated';
-import colors from '@/theme/colors';
+import { ThemeColors } from '@/types/theme.types';
+import { useAppTheme } from '@/hooks/useAppTheme';
 
 const DOTS = 4;
 const DURATION = 1000;
@@ -21,6 +22,7 @@ const Dot = ({
   index: number;
   progress: SharedValue<number>;
 }) => {
+  const { activeTheme } = useAppTheme();
   const animatedStyle = useAnimatedStyle(() => {
     const distance = Math.abs(progress.value - index);
 
@@ -33,7 +35,7 @@ const Dot = ({
 
     const opacity = interpolate(
       distance,
-      [0, 1],
+      [0, 0.5],
       [1, 0.5],
       Extrapolation.CLAMP,
     );
@@ -44,7 +46,7 @@ const Dot = ({
     };
   });
 
-  return <Animated.View style={[styles.dot, animatedStyle]} />;
+  return <Animated.View style={[dStyle.dot(activeTheme), animatedStyle]} />;
 };
 
 const SnakeDotLoader = () => {
@@ -68,16 +70,19 @@ const SnakeDotLoader = () => {
   );
 };
 
+const dStyle = {
+  dot: (activeTheme: ThemeColors): ViewStyle => ({
+    width: 10,
+    height: 10,
+    borderRadius: 7,
+    backgroundColor: activeTheme.primary,
+  }),
+};
+
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     gap: 8,
-  },
-  dot: {
-    width: 10,
-    height: 10,
-    borderRadius: 7,
-    backgroundColor: colors.light.primary,
   },
 });
 

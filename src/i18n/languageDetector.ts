@@ -5,6 +5,7 @@ import { storage } from '@/storage';
 const languageDetector: LanguageDetectorModule = {
   type: 'languageDetector',
   detect: () => {
+    // return 'en';
     const stored = storage.getString('app_language');
 
     console.log('stored', stored);
