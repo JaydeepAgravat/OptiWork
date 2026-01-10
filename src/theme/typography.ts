@@ -1,7 +1,7 @@
-import { fontFamilies } from './fontFamilies';
+import fontFamilies from './fontFamilies';
 import { scaleFont } from './scale';
 
-export const typography = {
+const typography = {
   // ─── DISPLAY ───
   displayLarge: {
     fontFamily: fontFamilies.googleBold,
@@ -91,4 +91,4 @@ export const typography = {
   },
 } as const;
 
-export type TypographyTokens = keyof typeof typography;
+export default typography;

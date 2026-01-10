@@ -5,9 +5,6 @@ import arCommon from './ar/common.json';
 import arOnboard from './ar/onboard.json';
 import arToast from './ar/toast.json';
 
-import i18n from '..';
-import { TOptions } from 'i18next';
-
 /**
  * Single source of truth for languages
  */
@@ -82,13 +79,6 @@ type RecursiveKeys<T, IsRoot extends boolean = true> = {
 export type TxKeyPath = {
   [N in keyof Resource & string]: `${N}:${RecursiveKeys<Resource[N]>}`;
 }[keyof Resource & string];
-
-export function translate(key: TxKeyPath, options?: TOptions): string {
-  if (i18n.isInitialized) {
-    return i18n.t(key, options);
-  }
-  return key;
-}
 
 export type TxKeyPathByNamespace<N extends keyof Resource & string> =
   `${N}:${RecursiveKeys<Resource[N]>}`;

@@ -1,14 +1,16 @@
 import { TxKeyPath } from '@/i18n/translations';
-import colors from '@/theme/colors';
-import { TextPresetName, textPresets } from '@/theme/textPresets';
-import { typography } from '@/theme/typography';
+import { useTheme } from '@/providers/ThemeProvider';
+import textPresets from '@/theme/textPresets';
+import typography from '@/theme/typography';
+import { TextPresetName } from '@/types/theme.types';
 import { TOptions } from 'i18next';
 import React, { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Text, StyleSheet, TextStyle } from 'react-native';
 
 interface AppTextProps {
-  tx: TxKeyPath;
+  text?: string;
+  tx?: TxKeyPath;
   txOptions?: TOptions;
   preset?: TextPresetName;
   textAlign?: TextStyle['textAlign'];
@@ -16,6 +18,7 @@ interface AppTextProps {
 }
 
 const AppText = ({
+  text,
   tx,
   txOptions,
   preset = 'bodyPrimary',
@@ -23,6 +26,7 @@ const AppText = ({
   numberOfLines,
 }: AppTextProps) => {
   const { t } = useTranslation();
+  const { activeTheme } = useTheme();
   const finalStyle = useMemo<TextStyle>(() => {
     const selectedPreset = textPresets[preset] ?? textPresets.bodyPrimary;
     const typographyStyle = typography[selectedPreset.variant];
@@ -33,13 +37,13 @@ const AppText = ({
       fontSize: typographyStyle.fontSize,
       lineHeight: typographyStyle.lineHeight,
       letterSpacing: typographyStyle.letterSpacing,
-      color: colors.light[selectedPreset.color],
+      color: activeTheme.colors[selectedPreset.color],
     };
-  }, [preset, textAlign]);
+  }, [preset, textAlign, activeTheme.colors]);
 
   return (
     <Text numberOfLines={numberOfLines} style={[styles.base, finalStyle]}>
-      {t(tx, txOptions)}
+      {tx ? t(tx, txOptions) : text}
     </Text>
   );
 };

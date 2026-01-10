@@ -14,7 +14,9 @@
       "@/theme/*": ["theme/*"],
       "@/storage/*": ["storage/*"],
       "@/types/*": ["types/*"],
-      "@/i18n/*": ["i18n/*"]
+      "@/i18n/*": ["i18n/*"],
+      "@/utils/*": ["utils/*"],
+      "@/providers/*": ["providers/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

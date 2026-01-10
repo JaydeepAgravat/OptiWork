@@ -1,4 +1,6 @@
-import { ToastTxKey, translate } from '@/i18n/translations';
+import i18n from '@/i18n';
+import { ToastTxKey, TxKeyPath } from '@/i18n/translations';
+import { TOptions } from 'i18next';
 import { toast } from 'sonner-native';
 
 type ToastOptions = {
@@ -6,6 +8,14 @@ type ToastOptions = {
   duration?: number;
   id?: string | number;
 };
+
+export function translate(key: TxKeyPath, options?: TOptions): string {
+  console.log('inside translate i18n initialized:', i18n.isInitialized);
+  if (i18n.isInitialized) {
+    return i18n.t(key, options);
+  }
+  return key;
+}
 
 function buildToastOptions(options?: ToastOptions) {
   return {

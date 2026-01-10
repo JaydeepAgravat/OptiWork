@@ -35,7 +35,7 @@ const AppLoaderHost = forwardRef<AppLoaderRef>((_, ref) => {
 const styles = StyleSheet.create({
   overlay: {
     ...StyleSheet.absoluteFill,
-    backgroundColor: colors.light.blur,
+    backgroundColor: colors.light.bgBackdrop,
     justifyContent: 'center',
     alignItems: 'center',
     zIndex: 9999,
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     height: scale(90),
     width: vScale(90),
     borderRadius: 10,
-    backgroundColor: colors.light.secondary,
+    backgroundColor: colors.light.shadowLg,
     justifyContent: 'center',
     alignItems: 'center',
   },

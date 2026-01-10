@@ -4,8 +4,12 @@ import { appLoader } from '@/components/loader/appLoader';
 import { appToast } from '@/components/toast/appToast';
 import AppButton from '@/components/ui/AppButton';
 import AppText from '@/components/ui/AppText';
+import { useTheme } from '@/providers/ThemeProvider';
+import i18n from '@/i18n';
 
 const OnBoard = () => {
+  const { toggleThemePreference } = useTheme();
+
   const onNextPress = () => {
     appToast.info('toast:success_title', {
       description: 'toast:logic_success_desc',
@@ -13,11 +17,12 @@ const OnBoard = () => {
   };
 
   const onSkipPress = () => {
+    toggleThemePreference();
     appLoader.show();
     setTimeout(() => {
       appLoader.hide();
-    }, 5000);
-    // i18n.changeLanguage(i18n.language === 'ar' ? 'en' : 'ar');
+    }, 1000);
+    i18n.changeLanguage(i18n.language === 'ar' ? 'en' : 'ar');
   };
 
   return (

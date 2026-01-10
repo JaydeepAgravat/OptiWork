@@ -1,12 +1,11 @@
-import { TypographyTokens } from './typography';
-import { ColorTokens } from './colors';
+import { ColorTokens, TypographyTokens } from '@/types/theme.types';
 
 type TextPreset = {
   variant: TypographyTokens;
   color: ColorTokens;
 };
 
-export const textPresets = {
+const textPresets = {
   // ─── SCREEN LEVEL ───
   screenTitle: {
     variant: 'headlineLarge',
@@ -32,7 +31,7 @@ export const textPresets = {
   },
   cardSubtitle: {
     variant: 'bodySmall',
-    color: 'textSecondary',
+    color: 'textTertiary',
   },
 
   // ─── LIST / ITEM ───
@@ -74,11 +73,11 @@ export const textPresets = {
   },
   inputPlaceholder: {
     variant: 'bodyMedium',
-    color: 'textTertiary',
+    color: 'textDisabled',
   },
   helperText: {
     variant: 'bodySmall',
-    color: 'textSecondary',
+    color: 'textTertiary',
   },
   errorText: {
     variant: 'bodySmall',
@@ -88,15 +87,15 @@ export const textPresets = {
   // ─── BUTTONS ───
   buttonPrimary: {
     variant: 'labelLarge',
-    color: 'onPrimary',
+    color: 'buttonPrimaryText',
   },
   buttonSecondary: {
     variant: 'labelLarge',
-    color: 'primary',
+    color: 'buttonSecondaryText',
   },
   buttonDisabled: {
     variant: 'labelLarge',
-    color: 'textDisabled',
+    color: 'buttonDisabledText',
   },
 
   // ─── TABS / CHIPS / BADGES ───
@@ -110,11 +109,11 @@ export const textPresets = {
   },
   chipText: {
     variant: 'labelMedium',
-    color: 'onSurface',
+    color: 'textPrimary',
   },
   badgeText: {
     variant: 'labelSmall',
-    color: 'onError',
+    color: 'textInverse',
   },
 
   // ─── CAPTIONS / META ───
@@ -124,7 +123,7 @@ export const textPresets = {
   },
   timestamp: {
     variant: 'labelSmall',
-    color: 'textSecondary',
+    color: 'textDisabled',
   },
 
   // ─── EMPTY / MARKETING ───
@@ -138,4 +137,4 @@ export const textPresets = {
   },
 } as const satisfies Record<string, TextPreset>;
 
-export type TextPresetName = keyof typeof textPresets;
+export default textPresets;

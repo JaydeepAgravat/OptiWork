@@ -1,11 +1,10 @@
-import colors from '@/theme/colors';
-import { typography } from '@/theme/typography';
+import { useTheme } from '@/providers/ThemeProvider';
+import typography from '@/theme/typography';
 import React from 'react';
 import { Toaster } from 'sonner-native';
 
-export function AppToaster() {
-  const appTheme = 'light';
-  const themeColors = colors.light;
+const AppToaster = () => {
+  const { activeColorScheme, activeTheme } = useTheme();
 
   return (
     <Toaster
@@ -14,17 +13,19 @@ export function AppToaster() {
       position="top-center"
       visibleToasts={3}
       richColors
-      theme={appTheme}
+      theme={activeColorScheme}
       toastOptions={{
         titleStyle: {
           ...typography.bodyMedium,
-          color: themeColors.textPrimary,
+          color: activeTheme.colors.textPrimary,
         },
         descriptionStyle: {
           ...typography.bodySmall,
-          color: themeColors.textSecondary,
+          color: activeTheme.colors.textSecondary,
         },
       }}
     />
   );
-}
+};
+
+export default AppToaster;
