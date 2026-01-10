@@ -9,7 +9,7 @@ import Animated, {
   Extrapolation,
   SharedValue,
 } from 'react-native-reanimated';
-import colors from '../../theme/colors';
+import colors from '@/theme/colors';
 
 const DOTS = 4;
 const DURATION = 1000;

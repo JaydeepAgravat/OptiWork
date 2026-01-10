@@ -1,7 +1,7 @@
+import colors from '@/theme/colors';
+import { typography } from '@/theme/typography';
 import React from 'react';
 import { Toaster } from 'sonner-native';
-import colors from '../../theme/colors';
-import { typography } from '../../theme/typography';
 
 export function AppToaster() {
   const appTheme = 'light';

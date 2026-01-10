@@ -1,12 +1,9 @@
 import { StyleSheet, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import AppText from '../components/ui/AppText';
-import AppButton from '../components/ui/AppButton';
-import { appToast } from '../components/toast/appToast';
-
-import i18n from '../i18n';
-import { appLoader } from '../components/loader/appLoader';
-import FastImage from '@d11/react-native-fast-image';
+import { appLoader } from '@/components/loader/appLoader';
+import { appToast } from '@/components/toast/appToast';
+import AppButton from '@/components/ui/AppButton';
+import AppText from '@/components/ui/AppText';
 
 const OnBoard = () => {
   const onNextPress = () => {
@@ -22,29 +19,6 @@ const OnBoard = () => {
     }, 5000);
     // i18n.changeLanguage(i18n.language === 'ar' ? 'en' : 'ar');
   };
-  return (
-    <View
-      style={{
-        flex: 1,
-        alignSelf: 'center',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <FastImage
-        style={{
-          width: 100,
-          height: 100,
-        }}
-        source={{
-          uri: 'https://reactnative.dev/img/header_logo.svg',
-          cache: FastImage.cacheControl.immutable,
-          priority: FastImage.priority.low,
-        }}
-        resizeMode={FastImage.resizeMode.contain}
-      />
-    </View>
-  );
 
   return (
     <View style={styles.root}>

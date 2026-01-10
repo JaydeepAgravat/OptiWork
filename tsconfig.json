@@ -3,7 +3,19 @@
   "compilerOptions": {
     "types": ["jest"],
     "strict": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"],
+      "@/assets/*": ["assets/*"],
+      "@/components/*": ["components/*"],
+      "@/screens/*": ["screens/*"],
+      "@/theme/*": ["theme/*"],
+      "@/storage/*": ["storage/*"],
+      "@/types/*": ["types/*"],
+      "@/i18n/*": ["i18n/*"]
+    }
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["**/node_modules", "**/Pods"]

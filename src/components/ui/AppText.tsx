@@ -1,11 +1,11 @@
-import React, { memo, useMemo } from 'react';
-import { Text, StyleSheet, TextStyle } from 'react-native';
-import { typography } from '../../theme/typography';
-import colors from '../../theme/colors';
-import { textPresets, TextPresetName } from '../../theme/textPresets';
-import { TxKeyPath } from '../../i18n/translations';
+import { TxKeyPath } from '@/i18n/translations';
+import colors from '@/theme/colors';
+import { TextPresetName, textPresets } from '@/theme/textPresets';
+import { typography } from '@/theme/typography';
 import { TOptions } from 'i18next';
+import React, { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Text, StyleSheet, TextStyle } from 'react-native';
 
 interface AppTextProps {
   tx: TxKeyPath;

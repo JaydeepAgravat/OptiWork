@@ -1,6 +1,6 @@
+import { TxKeyPath } from '@/i18n/translations';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import AppText from './AppText';
-import { TxKeyPath } from '../../i18n/translations';
 
 interface AppButtonProps {
   tx: TxKeyPath;

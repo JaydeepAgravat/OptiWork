@@ -4,6 +4,7 @@ import enToast from './en/toast.json';
 import arCommon from './ar/common.json';
 import arOnboard from './ar/onboard.json';
 import arToast from './ar/toast.json';
+
 import i18n from '..';
 import { TOptions } from 'i18next';
 

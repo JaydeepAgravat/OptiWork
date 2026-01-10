@@ -1,5 +1,5 @@
+import { ToastTxKey, translate } from '@/i18n/translations';
 import { toast } from 'sonner-native';
-import { ToastTxKey, translate } from '../../i18n/translations';
 
 type ToastOptions = {
   description?: ToastTxKey;

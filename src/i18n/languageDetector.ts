@@ -1,32 +1,29 @@
-import * as RNLocalize from "react-native-localize";
-import { storage } from "../storage";
-import { LanguageDetectorModule } from "i18next";
+import * as RNLocalize from 'react-native-localize';
+import { LanguageDetectorModule } from 'i18next';
+import { storage } from '@/storage';
 
+const languageDetector: LanguageDetectorModule = {
+  type: 'languageDetector',
+  detect: () => {
+    const stored = storage.getString('app_language');
 
-const customDetector: LanguageDetectorModule = {
-    type: "languageDetector",
-    detect: () => {
-        const stored = storage.getString("app_language");
+    console.log('stored', stored);
 
-        console.log("stored", stored)
+    if (stored) {
+      return stored;
+    }
 
-        if (stored) {
-            return stored;
-        }
+    const best = RNLocalize.findBestLanguageTag(['en', 'ar']);
 
-        const best = RNLocalize.findBestLanguageTag([
-            "en", "ar"
-        ]);
+    return best?.languageTag ?? 'en';
+  },
 
-        return best?.languageTag ?? "en";
-    },
+  init: () => {},
 
-    init: () => { },
-
-    cacheUserLanguage: (lng: string) => {
-        console.log("cached user language")
-        storage.set("app_language", lng);
-    },
+  cacheUserLanguage: (lng: string) => {
+    console.log('cached user language');
+    storage.set('app_language', lng);
+  },
 };
 
-export default customDetector
+export default languageDetector;

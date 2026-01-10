@@ -1,8 +1,8 @@
 import React, { forwardRef, useImperativeHandle, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import SnakeDotLoader from './SnakeDotLoader';
-import { scale, vScale } from '../../theme/scale';
-import colors from '../../theme/colors';
+import colors from '@/theme/colors';
+import { scale, vScale } from '@/theme/scale';
 
 export type AppLoaderRef = {
   show: () => void;

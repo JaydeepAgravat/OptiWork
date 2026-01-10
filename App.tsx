@@ -1,9 +1,9 @@
+import { appLoaderRef } from '@/components/loader/appLoader';
+import AppLoaderHost from '@/components/loader/AppLoaderHost';
+import { AppToaster } from '@/components/toast/AppToaster';
+import OnBoard from '@/screens/OnBoard';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { AppToaster } from './src/components/toast/AppToaster';
-import OnBoard from './src/screens/OnBoard';
-import AppLoaderHost from './src/components/loader/AppLoaderHost';
-import { appLoaderRef } from './src/components/loader/appLoader';
 
 const App = () => {
   return (
