@@ -2,7 +2,7 @@ import React, { forwardRef, useImperativeHandle, useState } from 'react';
 import { View, StyleSheet, ViewStyle } from 'react-native';
 import SnakeDotLoader from './SnakeDotLoader';
 import { hS, vS } from '@/theme/scale';
-import { ThemeColors } from '@/types/theme.types';
+import { ThemeColors } from '@/theme/theme.types';
 import { useAppTheme } from '@/hooks/useAppTheme';
 
 export type AppLoaderRef = {

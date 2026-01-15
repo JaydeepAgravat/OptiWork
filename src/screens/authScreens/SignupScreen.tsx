@@ -1,5 +1,7 @@
+import { Text } from 'react-native';
+
 const SignupScreen = () => {
-  return <></>;
+  return <Text>Sign Up Up</Text>;
 };
 
 export default SignupScreen;

@@ -16,9 +16,9 @@
       "@/types/*": ["types/*"],
       "@/i18n/*": ["i18n/*"],
       "@/utils/*": ["utils/*"],
-      "@/providers/*": ["providers/*"],
       "@/navigation/*": ["navigation/*"],
-      "@/hooks/*": ["hooks/*"]
+      "@/hooks/*": ["hooks/*"],
+      "@/store/*": ["store/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

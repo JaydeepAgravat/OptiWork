@@ -28,7 +28,7 @@ PODS:
   - libwebp/webp (1.5.0):
     - libwebp/sharpyuv
   - MMKVCore (2.2.4)
-  - NitroMmkv (4.1.0):
+  - NitroMmkv (4.1.1):
     - boost
     - DoubleConversion
     - fast_float
@@ -59,7 +59,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - SocketRocket
     - Yoga
-  - NitroModules (0.32.0):
+  - NitroModules (0.33.1):
     - boost
     - DoubleConversion
     - fast_float
@@ -3357,8 +3357,8 @@ SPEC CHECKSUMS:
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
   MMKVCore: f2dd4c9befea04277a55e84e7812f930537993df
-  NitroMmkv: ce1df9b9f0e06dfbde2455d863047e0411fceb6e
-  NitroModules: f964d2f3f5b392d0c0303737085cc30e375dc43f
+  NitroMmkv: 8ed7ef6f41b91785fc580c975f68d6d675214767
+  NitroModules: efa9d6d300576843d6118c223922962a051fab83
   RCT-Folly: 846fda9475e61ec7bcbf8a3fe81edfcaeb090669
   RCTDeprecation: a41bbdd9af30bf2e5715796b313e44ec43eefff1
   RCTRequired: 7be34aabb0b77c3cefe644528df0fa0afad4e4d0

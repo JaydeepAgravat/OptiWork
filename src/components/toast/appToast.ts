@@ -10,11 +10,7 @@ type ToastOptions = {
 };
 
 export function translate(key: TxKeyPath, options?: TOptions): string {
-  console.log('inside translate i18n initialized:', i18n.isInitialized);
-  if (i18n.isInitialized) {
-    return i18n.t(key, options);
-  }
-  return key;
+  return i18n.t(key, options);
 }
 
 function buildToastOptions(options?: ToastOptions) {

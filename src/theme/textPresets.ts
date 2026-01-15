@@ -1,4 +1,4 @@
-import { ColorTokens, TypographyTokens } from '@/types/theme.types';
+import { ColorTokens, TypographyTokens } from '@/theme/theme.types';
 
 type TextPreset = {
   variant: TypographyTokens;

@@ -2,7 +2,7 @@ import { useAppTheme } from '@/hooks/useAppTheme';
 import { TxKeyPath } from '@/i18n/translations';
 import textPresets from '@/theme/textPresets';
 import typography from '@/theme/typography';
-import { TextPresetName } from '@/types/theme.types';
+import { TextPresetName } from '@/theme/theme.types';
 import { TOptions } from 'i18next';
 import React, { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

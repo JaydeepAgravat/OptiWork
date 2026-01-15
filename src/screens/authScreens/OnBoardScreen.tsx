@@ -2,13 +2,14 @@ import { StyleSheet, View, ViewStyle } from 'react-native';
 import AppLg from '@/components/ui/AppLg';
 import AppButton from '@/components/ui/AppButton';
 import AppText from '@/components/ui/AppText';
-import { ThemeColors } from '@/types/theme.types';
+import { ThemeColors } from '@/theme/theme.types';
 import { hS, vS } from '@/theme/scale';
 import { useState } from 'react';
 import { TxKeyPath } from '@/i18n/translations';
-import { AuthStackScreenProps } from '@/types/navigation.types';
-import { appLoader } from '@/components/loader/appLoader';
+import { AuthStackScreenProps } from '@/navigation/navigation.types';
 import { useAppTheme } from '@/hooks/useAppTheme';
+import { useAppDispatch } from '@/hooks/useStore';
+import { completeOnboarding } from '@/store/slices/appSlice';
 
 const slides: {
   title: TxKeyPath;
@@ -36,31 +37,26 @@ type Props = AuthStackScreenProps<'Onboard'>;
 
 const OnBoardScreen = ({ navigation }: Props) => {
   const { activeTheme } = useAppTheme();
+  const dispatch = useAppDispatch();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const onNextPress = () => {
-    if (currentIndex < slides.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    } else {
-      navigation.navigate('Sigin');
-    }
+    setCurrentIndex(currentIndex + 1);
   };
 
   const onSkipPress = () => {
-    appLoader.show();
-
-    setTimeout(() => {
-      appLoader.hide();
-    }, 3000);
-    // navigation.navigate('Sigin');
+    dispatch(completeOnboarding());
+    navigation.navigate('Signin');
   };
 
   const onSignInPress = () => {
-    navigation.navigate('Sigin');
+    dispatch(completeOnboarding());
+    navigation.navigate('Signin');
   };
 
   const onSignUpPress = () => {
     navigation.navigate('Signup');
+    dispatch(completeOnboarding());
   };
 
   return (

@@ -1,11 +1,19 @@
-import { AppThemeContext } from '@/providers/ThemeProvider';
-import { ThemeContextValue } from '@/types/theme.types';
-import { useContext } from 'react';
+import colors from '@/theme/colors';
+import { useAppSelector } from './useStore';
 
-export const useAppTheme = (): ThemeContextValue => {
-  const ctx = useContext(AppThemeContext);
-  if (!ctx) {
-    throw new Error('useAppTheme must be used inside ThemeProvider');
-  }
-  return ctx;
+export const useAppTheme = () => {
+  const { themePreference, systemTheme } = useAppSelector(
+    state => state.appReducer,
+  );
+
+  const activeColorScheme =
+    themePreference === 'system' ? systemTheme : themePreference;
+
+  const activeTheme = activeColorScheme === 'dark' ? colors.dark : colors.light;
+
+  return {
+    activeTheme,
+    activeColorScheme,
+    themePreference,
+  };
 };
