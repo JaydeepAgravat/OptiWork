@@ -1,4 +1,4 @@
-import { LightDarkMode } from '@/store/slices/appSlice';
+import { LightDarkMode } from '@/store/useAppStore';
 import { Appearance } from 'react-native';
 
 export const getSystemTheme = (): LightDarkMode => {

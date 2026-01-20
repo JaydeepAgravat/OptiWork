@@ -5,14 +5,12 @@ import OnBoardScreen from '@/screens/authScreens/OnBoardScreen';
 import SignupScreen from '@/screens/authScreens/SignupScreen';
 import SigninScreen from '@/screens/authScreens/SigninScreen';
 import ForgotPasswordScreen from '@/screens/authScreens/ForgotPasswordScreen';
-import { useAppSelector } from '@/hooks/useStore';
+import { useAppStore } from '@/store/useAppStore';
 
 const Stack = createNativeStackNavigator<AuthStackParamList>();
 
 const AuthStack = () => {
-  const onboardingCompleted = useAppSelector(
-    s => s.appReducer.onboardingCompleted,
-  );
+  const onboardingCompleted = useAppStore(state => state.onboardingCompleted);
 
   return (
     <Stack.Navigator
