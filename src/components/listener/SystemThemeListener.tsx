@@ -1,18 +1,19 @@
 import { useEffect } from 'react';
-import { useAppDispatch } from '@/hooks/useStore';
-import { setSystemTheme } from '@/store/slices/appSlice';
+import { useAppStore } from '@/store/useAppStore';
 import { getSystemTheme, listenToSystemTheme } from '@/utils/systemUtils';
 
 export const SystemThemeListener = () => {
-  const dispatch = useAppDispatch();
+  const setSystemTheme = useAppStore(s => s.setSystemTheme);
 
   useEffect(() => {
-    dispatch(setSystemTheme(getSystemTheme()));
+    // set initial system theme
+    setSystemTheme(getSystemTheme());
 
+    // listen for system theme changes
     return listenToSystemTheme(theme => {
-      dispatch(setSystemTheme(theme));
+      setSystemTheme(theme);
     });
-  }, [dispatch]);
+  }, [setSystemTheme]);
 
   return null;
 };

@@ -1,7 +1,8 @@
 import * as RNLocalize from 'react-native-localize';
 import { LanguageDetectorModule } from 'i18next';
 import { storage } from '@/storage/storage';
-import { APP_STORAGE_KEY, AppState } from '@/store/slices/appSlice';
+import { APP_STORAGE_KEY } from '@/storage/keys';
+import { AppState } from '@/store/useAppStore';
 
 const languageDetector: LanguageDetectorModule = {
   type: 'languageDetector',

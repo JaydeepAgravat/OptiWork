@@ -8,8 +8,7 @@ import { useState } from 'react';
 import { TxKeyPath } from '@/i18n/translations';
 import { AuthStackScreenProps } from '@/navigation/navigation.types';
 import { useAppTheme } from '@/hooks/useAppTheme';
-import { useAppDispatch } from '@/hooks/useStore';
-import { completeOnboarding } from '@/store/slices/appSlice';
+import { useAppStore } from '@/store/useAppStore';
 
 const slides: {
   title: TxKeyPath;
@@ -37,7 +36,7 @@ type Props = AuthStackScreenProps<'Onboard'>;
 
 const OnBoardScreen = ({ navigation }: Props) => {
   const { activeTheme } = useAppTheme();
-  const dispatch = useAppDispatch();
+  const completeOnboarding = useAppStore(state => state.completeOnboarding);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const onNextPress = () => {
@@ -45,18 +44,18 @@ const OnBoardScreen = ({ navigation }: Props) => {
   };
 
   const onSkipPress = () => {
-    dispatch(completeOnboarding());
+    completeOnboarding();
     navigation.navigate('Signin');
   };
 
   const onSignInPress = () => {
-    dispatch(completeOnboarding());
+    completeOnboarding();
     navigation.navigate('Signin');
   };
 
   const onSignUpPress = () => {
+    completeOnboarding();
     navigation.navigate('Signup');
-    dispatch(completeOnboarding());
   };
 
   return (

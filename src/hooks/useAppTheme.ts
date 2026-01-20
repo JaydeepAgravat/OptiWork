@@ -1,10 +1,9 @@
 import colors from '@/theme/colors';
-import { useAppSelector } from './useStore';
+import { useAppStore } from '@/store/useAppStore';
 
 export const useAppTheme = () => {
-  const { themePreference, systemTheme } = useAppSelector(
-    state => state.appReducer,
-  );
+  const themePreference = useAppStore(s => s.themePreference);
+  const systemTheme = useAppStore(s => s.systemTheme);
 
   const activeColorScheme =
     themePreference === 'system' ? systemTheme : themePreference;
