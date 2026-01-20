@@ -1,0 +1,36 @@
+name: CI
+
+# Run this workflow on push or PR to main or any branch you want
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check:
+    name: Run Prettier, ESLint & TypeScript Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run Prettier
+        run: yarn format
+
+      - name: Run ESLint
+        run: yarn lint
+
+      - name: Run TypeScript typecheck
+        run: yarn typecheck
