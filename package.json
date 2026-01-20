@@ -5,8 +5,8 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "format": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,md}\"",
-    "format:fix": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format": "prettier --check \"src/**/*.{ts,tsx}\"",
+    "format:fix": "prettier --write \"src/**/*.{ts,tsx}\"",
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
     "typecheck": "tsc --noEmit",
@@ -17,7 +17,7 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx,js,jsx}": [
+    "src/**/*.{ts,tsx}": [
       "prettier --write",
       "eslint --fix"
     ]
