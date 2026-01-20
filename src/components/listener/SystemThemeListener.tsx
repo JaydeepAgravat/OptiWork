@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+
 import { useAppStore } from '@/store/useAppStore';
 import { getSystemTheme, listenToSystemTheme } from '@/utils/systemUtils';
 

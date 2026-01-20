@@ -1,7 +1,10 @@
-import { useAppTheme } from '@/hooks/useAppTheme';
 import React from 'react';
-import { StyleProp, ViewStyle } from 'react-native';
+
+import type { StyleProp, ViewStyle } from 'react-native';
+
 import LinearGradient from 'react-native-linear-gradient';
+
+import { useAppTheme } from '@/hooks/useAppTheme';
 
 interface AppLgProps {
   style?: StyleProp<ViewStyle>;

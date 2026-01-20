@@ -1,7 +1,9 @@
+import React from 'react';
+
+import { Toaster } from 'sonner-native';
+
 import { useAppTheme } from '@/hooks/useAppTheme';
 import typography from '@/theme/typography';
-import React from 'react';
-import { Toaster } from 'sonner-native';
 
 const AppToaster = () => {
   const { activeColorScheme, activeTheme } = useAppTheme();

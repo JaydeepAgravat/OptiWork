@@ -1,9 +1,12 @@
-import { NavigationContainer } from '@react-navigation/native';
-import AuthStack from './AuthStack';
 import { StatusBar } from 'react-native';
+
+import { NavigationContainer } from '@react-navigation/native';
+
 import { useAppTheme } from '@/hooks/useAppTheme';
 import { useNetworkStatus } from '@/hooks/useNetworkStatus';
 import NoInternetScreen from '@/screens/NoInternetScreen';
+
+import AuthStack from './AuthStack';
 
 const RootNavigator = () => {
   const { activeColorScheme } = useAppTheme();

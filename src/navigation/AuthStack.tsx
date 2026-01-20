@@ -1,11 +1,15 @@
 import React from 'react';
+
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { AuthStackParamList } from '@/navigation/navigation.types';
-import OnBoardScreen from '@/screens/authScreens/OnBoardScreen';
-import SignupScreen from '@/screens/authScreens/SignupScreen';
-import SigninScreen from '@/screens/authScreens/SigninScreen';
+
+// import type { AuthStackParamList } from '@/navigation/navigation.types';
 import ForgotPasswordScreen from '@/screens/authScreens/ForgotPasswordScreen';
+import OnBoardScreen from '@/screens/authScreens/OnBoardScreen';
+import SigninScreen from '@/screens/authScreens/SigninScreen';
+import SignupScreen from '@/screens/authScreens/SignupScreen';
 import { useAppStore } from '@/store/useAppStore';
+
+import type { AuthStackParamList } from './navigation.types';
 
 const Stack = createNativeStackNavigator<AuthStackParamList>();
 

@@ -1,7 +1,8 @@
 import { create } from 'zustand';
-import { storage } from '@/storage/storage';
+
 import i18n from '@/i18n';
 import { APP_STORAGE_KEY } from '@/storage/keys';
+import { storage } from '@/storage/storage';
 
 export type ThemePreference = 'light' | 'dark' | 'system';
 export type LightDarkMode = 'light' | 'dark';

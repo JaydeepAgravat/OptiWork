@@ -1,5 +1,6 @@
-import { LightDarkMode } from '@/store/useAppStore';
 import { Appearance } from 'react-native';
+
+import type { LightDarkMode } from '@/store/useAppStore';
 
 export const getSystemTheme = (): LightDarkMode => {
   return Appearance.getColorScheme() === 'dark' ? 'dark' : 'light';

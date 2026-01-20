@@ -1,8 +1,12 @@
-import { TxKeyPath } from '@/i18n/translations';
-import { StyleSheet, TouchableOpacity, ViewStyle } from 'react-native';
-import AppText from './AppText';
-import { mS, vS } from '@/theme/scale';
+import type { ViewStyle } from 'react-native';
+import { StyleSheet, TouchableOpacity } from 'react-native';
+
 import { useAppTheme } from '@/hooks/useAppTheme';
+import type { TxKeyPath } from '@/i18n/translations';
+import { mS, vS } from '@/theme/scale';
+import type { ThemeColors } from '@/theme/theme.types';
+
+import AppText from './AppText';
 
 type ButtonVariant = 'primary' | 'secondary';
 
@@ -52,7 +56,7 @@ const styles = StyleSheet.create({
 });
 
 const getButtonStyle = (
-  theme: any,
+  theme: ThemeColors,
   variant: ButtonVariant,
   disabled?: boolean,
 ) => {

@@ -1,6 +1,6 @@
-import colors from '@/theme/colors';
-import textPresets from '@/theme/textPresets';
-import typography from '@/theme/typography';
+import type colors from '@/theme/colors';
+import type textPresets from '@/theme/textPresets';
+import type typography from '@/theme/typography';
 
 export type TypographyTokens = keyof typeof typography;
 

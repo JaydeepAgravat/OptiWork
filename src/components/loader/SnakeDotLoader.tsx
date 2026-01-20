@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
-import { View, StyleSheet, ViewStyle } from 'react-native';
+
+import type { ViewStyle } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -7,10 +10,12 @@ import Animated, {
   withRepeat,
   interpolate,
   Extrapolation,
-  SharedValue,
 } from 'react-native-reanimated';
-import { ThemeColors } from '@/theme/theme.types';
+
 import { useAppTheme } from '@/hooks/useAppTheme';
+import type { ThemeColors } from '@/theme/theme.types';
+
+import type { SharedValue } from 'react-native-reanimated';
 
 const DOTS = 4;
 const DURATION = 1000;

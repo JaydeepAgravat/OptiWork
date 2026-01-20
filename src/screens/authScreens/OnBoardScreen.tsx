@@ -1,14 +1,17 @@
-import { StyleSheet, View, ViewStyle } from 'react-native';
-import AppLg from '@/components/ui/AppLg';
-import AppButton from '@/components/ui/AppButton';
-import AppText from '@/components/ui/AppText';
-import { ThemeColors } from '@/theme/theme.types';
-import { hS, vS } from '@/theme/scale';
 import { useState } from 'react';
-import { TxKeyPath } from '@/i18n/translations';
-import { AuthStackScreenProps } from '@/navigation/navigation.types';
+
+import type { ViewStyle } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+
+import AppButton from '@/components/ui/AppButton';
+import AppLg from '@/components/ui/AppLg';
+import AppText from '@/components/ui/AppText';
 import { useAppTheme } from '@/hooks/useAppTheme';
+import type { TxKeyPath } from '@/i18n/translations';
+import type { AuthStackScreenProps } from '@/navigation/navigation.types';
 import { useAppStore } from '@/store/useAppStore';
+import { hS, vS } from '@/theme/scale';
+import type { ThemeColors } from '@/theme/theme.types';
 
 const slides: {
   title: TxKeyPath;

@@ -1,9 +1,13 @@
 import React, { forwardRef, useImperativeHandle, useState } from 'react';
-import { View, StyleSheet, ViewStyle } from 'react-native';
-import SnakeDotLoader from './SnakeDotLoader';
-import { hS, vS } from '@/theme/scale';
-import { ThemeColors } from '@/theme/theme.types';
+
+import type { ViewStyle } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+
 import { useAppTheme } from '@/hooks/useAppTheme';
+import { hS, vS } from '@/theme/scale';
+import type { ThemeColors } from '@/theme/theme.types';
+
+import SnakeDotLoader from './SnakeDotLoader';
 
 export type AppLoaderRef = {
   show: () => void;

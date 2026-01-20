@@ -1,5 +1,5 @@
-import colors from '@/theme/colors';
 import { useAppStore } from '@/store/useAppStore';
+import colors from '@/theme/colors';
 
 export const useAppTheme = () => {
   const themePreference = useAppStore(s => s.themePreference);

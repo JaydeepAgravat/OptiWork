@@ -1,7 +1,9 @@
-import i18n from '@/i18n';
-import { ToastTxKey, TxKeyPath } from '@/i18n/translations';
-import { TOptions } from 'i18next';
 import { toast } from 'sonner-native';
+
+import i18n from '@/i18n';
+import type { ToastTxKey, TxKeyPath } from '@/i18n/translations';
+
+import type { TOptions } from 'i18next';
 
 type ToastOptions = {
   description?: ToastTxKey;

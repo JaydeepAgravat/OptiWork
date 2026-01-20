@@ -1,12 +1,17 @@
-import { useAppTheme } from '@/hooks/useAppTheme';
-import { TxKeyPath } from '@/i18n/translations';
-import textPresets from '@/theme/textPresets';
-import typography from '@/theme/typography';
-import { TextPresetName } from '@/theme/theme.types';
-import { TOptions } from 'i18next';
 import React, { memo, useMemo } from 'react';
+
+import type { TextStyle } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
+
 import { useTranslation } from 'react-i18next';
-import { Text, StyleSheet, TextStyle } from 'react-native';
+
+import { useAppTheme } from '@/hooks/useAppTheme';
+import type { TxKeyPath } from '@/i18n/translations';
+import textPresets from '@/theme/textPresets';
+import type { TextPresetName } from '@/theme/theme.types';
+import typography from '@/theme/typography';
+
+import type { TOptions } from 'i18next';
 
 interface AppTextProps {
   text?: string;

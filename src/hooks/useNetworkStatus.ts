@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+
 import NetInfo from '@react-native-community/netinfo';
 import { toast } from 'sonner-native';
 

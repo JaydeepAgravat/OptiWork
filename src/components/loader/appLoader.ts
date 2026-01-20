@@ -1,5 +1,6 @@
 import { createRef } from 'react';
-import { AppLoaderRef } from './AppLoaderHost';
+
+import type { AppLoaderRef } from './AppLoaderHost';
 
 export const appLoaderRef = createRef<AppLoaderRef>();
 
