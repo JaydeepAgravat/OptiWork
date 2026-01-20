@@ -1,13 +1,11 @@
-import { View } from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import type { RootStackParamList } from '@/navigation/navigation.types';
 
-// import type { RootStackParamList } from '@/navigation/navigation.types';
-
-// const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const RootStack = () => {
-  return <View />;
+  return <Stack.Navigator />;
 };
 
 export default RootStack;
