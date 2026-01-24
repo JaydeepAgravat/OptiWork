@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-import NetInfo from '@react-native-community/netinfo';
+import { addEventListener } from '@react-native-community/netinfo';
 import { toast } from 'sonner-native';
 
 export const useNetworkStatus = () => {
@@ -9,7 +9,7 @@ export const useNetworkStatus = () => {
   const isFirstLoad = useRef(true);
 
   useEffect(() => {
-    const unsubscribe = NetInfo.addEventListener(state => {
+    const unsubscribe = addEventListener(state => {
       const connected =
         state.isConnected && state.isInternetReachable !== false;
 
