@@ -5,6 +5,7 @@ import type { RootStackParamList } from '@/navigation/navigation.types';
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const RootStack = () => {
+  //@ts-expect-error TODO
   return <Stack.Navigator />;
 };
 
